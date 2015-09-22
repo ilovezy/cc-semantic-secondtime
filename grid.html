@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.min.css">
+</head>
+
+<body>
+    <div class="ui container">
+        <h2 class="text-center">grid</h2>
+        <h3>menu</h3>
+        <div class="ui secondary vertical menu">
+            <a class="active item">
+                Account
+            </a>
+            <a class="item">
+                Settings
+            </a>
+            <div class="ui dropdown item">
+                <i class="dropdown icon"></i> Display Options
+                <div class="menu">
+                    <div class="header">Text Size</div>
+                    <a class="item">Small</a>
+                    <a class="item">Medium</a>
+                    <a class="item">Large</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>messages</h3>
+
+        <div class="ui message warning">
+            <i class="close icon"></i>
+            <div class="header">
+                Your must register before you can do that!
+            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </div>
+        <div class="ui message success">
+            <i class="close icon"></i>
+            <div class="header">
+                Your must register before you can do that!
+            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </div>
+        <div class="ui message info">
+            <i class="close icon"></i>
+            <div class="header">
+                Your must register before you can do that!
+            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </div>
+        <div class="ui floating message ">
+            <i class="close icon"></i>
+            <div class="header">
+                Your must register before you can do that!
+            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </div>
+
+        <hr>
+        <h3>accordion</h3>
+        <div class="ui inverted segment">
+            <div class="ui accordion inverted fluid">
+                <div class="title">
+                    <i class="dropdown icon"></i> What is a dog?
+                </div>
+                <div class="content">
+                    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+                </div>
+                <div class="title">
+                    <i class="dropdown icon"></i> What kinds of dogs are there?
+                </div>
+                <div class="content">
+                    <p class="transition hidden">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+                </div>
+                <div class="title active">
+                    <i class="dropdown icon"></i> How do you acquire a dog?
+                </div>
+                <div class="content active">
+                    <p class="transition visible" style="display: block !important;">Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+                    <p class="transition visible" style="display: block !important;">A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>dimmer 遮罩层</h3>
+        <div id="dimmerTest">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+        <h3>modal</h3>
+        <div class="ui modal fullscreen">
+            <i class="close icon"></i>
+            <div class="header">Profile Picture</div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img src="img/eve1.jpg" height="1080" width="1920">
+                </div>
+                <div class="description">
+                    <div class="ui header">Lorem ipsum dolor sit amet</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui black deny button">Nope</div>
+                <div class="ui positive right labeled icon button">
+                    Yes,that's me
+                    <i class="checkmark icon"></i>
+                </div>
+            </div>
+        </div>
+        <button id="modalTest" class="ui button">modal</button>
+
+
+
+    </div>
+
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic/dist/semantic.min.js"></script>
+
+    <script>
+    $('.message .close').on('click', function(event) {
+        $(this).closest('.message').transition('slide');
+    });
+
+    $('.accordion').accordion()
+
+    $('#dimmerTest').dimmer('hide')
+
+    $('#modalTest').on('click', function(event) {
+        $('.modal').modal('show')
+    });
+    </script>
+</body>
+
+</html>
